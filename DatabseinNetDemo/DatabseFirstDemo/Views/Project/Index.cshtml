@@ -1,0 +1,159 @@
+﻿@model IEnumerable<DatabseFirstDemo.Models.tblProject>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OpenedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SubCategory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduledStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduledFinish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstFinish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualFinish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstDurationDays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RelatedIssues)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PctComplete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MgrComments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblContact.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblContact1.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblEndUser.EndUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblGroup.GroupName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblPriority.PriorityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblPublicity.PublicityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblStatu.StatusName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpenedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SubCategory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduledStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduledFinish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstFinish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualFinish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstDurationDays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateModified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RelatedIssues)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PctComplete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MgrComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblContact.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblContact1.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblEndUser.EndUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblGroup.GroupName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPriority.PriorityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPublicity.PublicityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblStatu.StatusName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ProjectID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ProjectID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ProjectID })
+        </td>
+    </tr>
+}
+
+</table>

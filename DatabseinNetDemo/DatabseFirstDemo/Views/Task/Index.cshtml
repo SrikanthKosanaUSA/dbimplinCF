@@ -1,0 +1,171 @@
+﻿@model IEnumerable<DatabseFirstDemo.Models.tblTask>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EndUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpenedBy)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OpenedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduledStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ScheduledFinish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstFinish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ActualFinish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstDurationDays)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateModified)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RelatedIssues)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publicity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PctComplete)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GroupName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IISR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Atch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblPriority.PriorityName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblProject.ProjectName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblStatu.StatusName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSubCategory.SubCategoryName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EndUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignedTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpenedBy)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OpenedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduledStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ScheduledFinish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstFinish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ActualFinish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstDurationDays)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateModified)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RelatedIssues)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publicity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PctComplete)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GroupName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IISR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Atch)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblPriority.PriorityName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblProject.ProjectName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblStatu.StatusName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSubCategory.SubCategoryName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TaskID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TaskID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TaskID })
+        </td>
+    </tr>
+}
+
+</table>
